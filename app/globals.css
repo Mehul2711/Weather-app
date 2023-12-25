@@ -3,4 +3,29 @@
 @tailwind utilities;
 
 :root {
+  background-image: url("../public/5466337.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media query for screens with a width below 1024 pixels */
+@media (max-width: 1023px) {
+  :root {
+    background-size: 100% 100%;
+  }
+}
+
+/* Media query for screens with a width below 640 pixels */
+@media (max-width: 639px) {
+  :root {
+    background-image: none;
+    background-color: rgb(58, 109, 197); /* Hide the background image */
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
