@@ -1,4 +1,5 @@
 "use client";
+require("dotenv").config();
 import Image from "next/image";
 import axios from "axios";
 import { useState } from "react";
@@ -12,7 +13,9 @@ export default function Home() {
   const [weather, setWeather] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`;
+  const apiKey = process.env.NEXT_PUBLIC_WEATHER_KEY;
+
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   console.log(city);
 
   const fetchWeather = (e) => {
